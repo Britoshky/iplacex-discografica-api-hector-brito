@@ -1,0 +1,24 @@
+https://github.com/Britoshky/discografia-api-springboot
+
+# 1. Clonar el repositorio
+git clone https://github.com/Britoshky/discografia-api-springboot.git
+cd discografia-api-springboot
+
+# 2. Crear archivo .env (en la raíz del proyecto)
+echo "SPRING_APPLICATION_NAME=api" >> .env
+echo "SPRING_DATA_MONGODB_URI=mongodb+srv://britoshky:CdCd2627@eva-u2-spring.akvkau5.mongodb.net/?retryWrites=true&w=majority&appName=eva-u2-spring" >> .env
+echo "SPRING_DATA_MONGODB_DATABASE=discografica-db" >> .env
+echo "SERVER_PORT=8080" >> .env
+
+# 3. Ejecutar el proyecto
+# En Linux/macOS
+export $(cat .env | xargs) && ./gradlew bootRun
+
+# En Windows PowerShell
+(Get-Content .env) -replace '^(.*?)=(.*)$', '$env:$1="$2"' | Invoke-Expression
+./gradlew.bat bootRun
+
+SPRING_APPLICATION_NAME=api
+MONGODB_URI=mongodb+srv://britoshky:CdCd2627@eva-u2-spring.akvkau5.mongodb.net/?retryWrites=true&w=majority&appName=eva-u2-spring
+SPRING_DATA_MONGODB_DATABASE=discografica-db
+SERVER_PORT=8080

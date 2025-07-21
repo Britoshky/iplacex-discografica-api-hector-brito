@@ -1,0 +1,11 @@
+# .dockerignore
+.gradle
+build
+.env
+.git
+.gitignore
+README.md
+node_modules
+.vscode
+*.iml
+*.log
